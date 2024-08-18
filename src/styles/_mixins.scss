@@ -1,0 +1,19 @@
+// Mixins.
+// Created these for reusable component stylings like the input fields.
+@mixin input-styles {
+  border: 1px solid $input-border;
+  border-radius: 5px;
+  font-size: $font-size;
+  font-family: $font-public-sans;
+}
+
+@mixin input-lg {
+  @include input-styles;
+  padding: 1.2rem, 1.6rem;
+}
+
+@mixin input-sm {
+  @include input-styles;
+  padding: 1.2rem 2.4rem;
+}
+

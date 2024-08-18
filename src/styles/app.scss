@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+// Media Queries
+@media (min-width: 850px) { 
+  // 850px and above (lg/ex-lg)
+  // This applies to large devices and extra-large devices (e.g., tablets in landscape mode, small desktops, and up)
+}
+
+@media (min-width: 550px) { 
+  // 550px and above (md - lg/ex-lg)
+  // This applies to medium devices and up (e.g., large smartphones, small tablets, and up)
+}
