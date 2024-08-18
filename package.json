@@ -1,0 +1,23 @@
+{
+  "name": "rrsoft-test",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "vite-plugin-restart": "^0.4.1"
+  }
+}
