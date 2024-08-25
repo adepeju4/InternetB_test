@@ -11,8 +11,8 @@
     }
   }
 
-  input.invalid + .custom-radio {
-    border-color: red;
+  textarea.invalid {
+    border: 1px solid crimson;
   }
 
   #step-2,
@@ -109,6 +109,10 @@
           color: #8f8f8f;
           opacity: 1;
         }
+      }
+
+      .dropdown-toggle.invalid {
+        border: 1px solid crimson;
       }
 
       .fa {
@@ -289,6 +293,10 @@
         outline: none;
       }
     }
+
+    input.invalid {
+      border: 1px solid crimson;
+    }
   }
 
   .name-fields {
@@ -312,6 +320,9 @@
       ::placeholder {
         color: #8f8f8f;
       }
+    }
+    input.invalid {
+      border: 1px solid crimson;
     }
   }
 
@@ -378,6 +389,10 @@ footer p {
 
     .name-fields input {
       font-size: 1.8rem;
+    }
+
+    .name-fields input.invalid {
+      border: 1px solid crimson;
     }
 
     .trust-badges {

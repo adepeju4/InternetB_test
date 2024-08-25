@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all the steps and next step buttons
   const steps: NodeListOf<HTMLDivElement> =
     document.querySelectorAll(".content-wrapper");
 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("click", function () {
         const value = item.innerText || "";
         dropdown.value = value;
-        dropdown.classList.remove("invalid"); // Remove the invalid class when a value is selected
+        dropdown.classList.remove("invalid");
         dropdownMenu.classList.remove("show");
       });
     });
@@ -34,14 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
       !dropdownMenu.contains(targetElement)
     ) {
       dropdownMenu.classList.remove("show");
-      console.log("Clicked outside. Dropdown closed.");
     }
   });
 
   // Keep track of the current step
   let currentStep = 0;
 
-  // Function to show the current step and hide the others
   const showStep = (index: number): void => {
     steps.forEach((step, i) => {
       if (i === index) {
@@ -52,10 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Initial display of the first step
   showStep(currentStep);
 
-  // Function to validate the current step
   const validateStep = (stepIndex: number): boolean => {
     const currentStepElement = steps[stepIndex];
     const inputs = currentStepElement.querySelectorAll(
@@ -63,12 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     let isValid = true;
 
-    // Track the groups of radio buttons we've checked
     const radioGroupsChecked = new Set<string>();
 
     inputs.forEach(input => {
       if (input instanceof HTMLInputElement && input.type === "radio") {
-        // If we've already checked this radio button group, skip
         if (radioGroupsChecked.has(input.name)) return;
 
         const radioGroup = currentStepElement.querySelectorAll(
@@ -79,12 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!isChecked) {
           isValid = false;
-          radioGroup.forEach(radio => radio.classList.add("invalid"));
+          radioGroup.forEach(radio => {
+            radio.classList.add("invalid");
+            const customRadio = radio.nextElementSibling as HTMLElement;
+            customRadio.classList.add("invalid");
+          });
         } else {
-          radioGroup.forEach(radio => radio.classList.remove("invalid"));
+          radioGroup.forEach(radio => {
+            radio.classList.remove("invalid");
+            const customRadio = radio.nextElementSibling as HTMLElement;
+            customRadio.classList.remove("invalid");
+          });
         }
 
-        // Mark this radio button group as checked
         radioGroupsChecked.add(input.name);
       } else if (
         (input instanceof HTMLInputElement ||
@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         input.type === "text" &&
         input.classList.contains("dropdown-toggle")
       ) {
-        // Custom validation for the dropdown
         if (input.value === "" || input.value === input.placeholder) {
           isValid = false;
           input.classList.add("invalid");
@@ -102,7 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
         input instanceof HTMLInputElement &&
         (input.type === "text" || input.type === "number")
       ) {
-        // Validation for text and number inputs (like First Name, Last Name, Phone, etc.)
+        if (input.value.trim() === "") {
+          isValid = false;
+          input.classList.add("invalid");
+        } else {
+          input.classList.remove("invalid");
+        }
+      } else if (
+        input instanceof HTMLTextAreaElement &&
+        (input.name === "zipCode" || input.name === "healthConditions")
+      ) {
         if (input.value.trim() === "") {
           isValid = false;
           input.classList.add("invalid");
@@ -125,17 +133,41 @@ document.addEventListener("DOMContentLoaded", () => {
     return isValid;
   };
 
-  // Add event listeners to the "Next Step" buttons
+  const gatherFormData = (): void => {
+    const formData: Record<string, string> = {};
+    const formElements = document.querySelectorAll("input, textarea, select");
+
+    formElements.forEach(element => {
+      if (element instanceof HTMLInputElement) {
+        if (element.type === "radio" || element.type === "checkbox") {
+          if (element.checked) {
+            formData[element.name] = element.value;
+          }
+        } else if (element.type === "text" || element.type === "number") {
+          formData[element.name] = element.value;
+        }
+      } else if (
+        element instanceof HTMLTextAreaElement ||
+        element instanceof HTMLSelectElement
+      ) {
+        formData[element.name] = element.value;
+      }
+    });
+
+    console.log("Form Data:", formData);
+  };
+
   nextButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+
       if (validateStep(currentStep)) {
         if (currentStep < steps.length - 1) {
           currentStep++;
           showStep(currentStep);
         } else {
-          console.log("All steps completed. Form can be submitted.");
-          // Optionally, submit the form here if this is the last step
-          // form.submit();
+          gatherFormData();
+          alert("Form successfully submitted!");
         }
       } else {
         alert("Please fill out all required fields before proceeding.");
