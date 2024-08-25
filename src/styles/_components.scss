@@ -1,0 +1,462 @@
+.content-wrapper {
+  @include inner-container-styles;
+
+  textarea {
+    @include input-lg;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $medium-blue;
+      outline: none;
+    }
+  }
+
+  input.invalid + .custom-radio {
+    border-color: red;
+  }
+
+  #step-2,
+  #step-3,
+  #step-4 {
+    .product-info {
+      display: none;
+    }
+  }
+
+  margin-bottom: 100px;
+  .trust-badges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+
+    .badge {
+      display: flex;
+      align-items: center;
+
+      &.google-reviews {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .badge-text {
+          font-size: 1.1rem;
+          color: #333;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .caption {
+    text-align: center;
+
+    h2 {
+      color: $black;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    > p {
+      color: $blue;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  .form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .form-group {
+      font-size: 2.25rem;
+      font-weight: 500;
+
+      .form-question {
+        margin: 0;
+      }
+
+      p.form-question {
+        display: flex;
+        gap: 5px;
+      }
+    }
+
+    .input-group {
+      position: relative;
+      margin-top: 10px;
+
+      .dropdown-toggle {
+        @include input-lg;
+        font-weight: 600;
+        background-color: transparent;
+        text-align: left;
+
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: border-color 0.3s ease;
+
+        &:hover,
+        &:focus {
+          border: 1px solid $medium-blue;
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #8f8f8f;
+          opacity: 1;
+        }
+      }
+
+      .fa {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #272727;
+        pointer-events: none;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      .dropdown-menu {
+        z-index: 1000;
+        display: none;
+        position: absolute;
+        top: 100%;
+        margin-top: 10px;
+        left: 0;
+        width: 100%;
+        border: 1px solid $input-border;
+        border-radius: 4px;
+        background-color: $white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        li {
+          display: block;
+          text-decoration: none;
+          padding: 10px;
+          font-size: 1.6rem;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+
+      .show {
+        display: block;
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .option {
+      @include input-sm;
+      display: flex;
+      align-items: center;
+      width: 48%;
+      font-weight: 600;
+      cursor: pointer;
+      color: $black;
+      transition: border-color 0.3s ease;
+
+      &:hover {
+        border: 1px solid $medium-blue;
+      }
+
+      input {
+        display: none;
+      }
+
+      .custom-radio {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          background-color: $black;
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+      }
+
+      input:checked + .custom-radio::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .form-actions {
+    text-align: center;
+    margin-top: 40px;
+
+    .next-step-button {
+      background-color: $secondary;
+      color: $white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+
+      &:hover {
+        background-color: darken($secondary, 10%);
+      }
+    }
+
+    .security-note {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: #5e676d;
+
+      .security-icon {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+      }
+
+      p {
+        margin: 0;
+        font-family: "DM Sans", Arial, sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .terms-and-conditions {
+    font-size: 1.5rem;
+    color: #8f8f8f;
+    font-weight: 400;
+
+    a {
+      color: $medium-blue;
+    }
+  }
+
+  .phone-contact,
+  .email-address {
+    input {
+      @include input-lg;
+
+      font-size: 1.8rem;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $medium-blue;
+        outline: none;
+      }
+    }
+  }
+
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    input {
+      @include input-sm;
+      display: flex;
+      align-items: center;
+      width: 48%;
+      font-weight: 600;
+      cursor: pointer;
+      color: $black;
+      transition: border-color 0.3s ease;
+      outline: none;
+      &:hover {
+        border: 1px solid $medium-blue;
+      }
+      ::placeholder {
+        color: #8f8f8f;
+      }
+    }
+  }
+
+  .caption .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: $blue;
+      gap: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#step-5 {
+  .product-info {
+    .trust-badges {
+      display: none;
+    }
+  }
+}
+
+footer p {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: $black;
+  margin: 0;
+}
+
+@media (min-width: 850px) {
+  .main-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-wrapper {
+    max-width: 1100px;
+    min-height: 500px;
+    flex-direction: row;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.8rem;
+
+    .options {
+      .option {
+        font-size: 1.8rem;
+      }
+    }
+
+    .name-fields input {
+      font-size: 1.8rem;
+    }
+
+    .trust-badges {
+      padding-top: 40px;
+    }
+
+    .form-step {
+      .input-group {
+        .dropdown-toggle {
+          font-size: 1.8rem;
+        }
+      }
+      .form-group {
+        font-size: 1.8rem;
+        font-weight: 500;
+        .form-question {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .product-info {
+      flex: 4;
+      background-color: #f8f8f8;
+
+      .caption {
+        padding: 20px;
+
+        h2 {
+          font-size: 2.4rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .form-step {
+      flex: 6;
+      padding: 40px;
+    }
+
+    #step-2,
+    #step-3,
+    #step-4 {
+      .product-info {
+        flex: 5;
+        display: flex;
+      }
+    }
+
+    br {
+      display: none;
+    }
+
+    .form-actions {
+      .security-note {
+        font-size: 1.4rem;
+      }
+
+      .next-step-button {
+        font-size: 2rem;
+      }
+    }
+
+    .terms-and-conditions {
+      font-size: 1.2rem;
+    }
+  }
+  #step-5 {
+    .product-info {
+      .trust-badges {
+        display: flex;
+      }
+    }
+  }
+
+  footer {
+    padding: 20px 120px;
+  }
+}

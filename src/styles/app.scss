@@ -1,6 +1,8 @@
 @import "variables";
 @import "mixins";
 @import "base";
+@import "layout";
+@import "components";
 
 // Media Queries
 @media (min-width: 850px) {

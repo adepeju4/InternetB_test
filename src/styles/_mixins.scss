@@ -1,18 +1,30 @@
 // Mixins.
 // Created these for reusable component stylings like the input fields.
 @mixin input-styles {
-  border: 1px solid $input-border;
+  border: 2px solid $input-border;
   border-radius: 5px;
-  font-size: $font-size;
+  font-size: 2.25rem;
   font-family: $font-public-sans;
 }
 
 @mixin input-lg {
   @include input-styles;
-  padding: 1.2rem, 1.6rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
 }
 
 @mixin input-sm {
   @include input-styles;
   padding: 1.2rem 2.4rem;
+}
+
+
+@mixin inner-container-styles {
+  padding: 20px 20px 40px 20px;
+  background-color: $white;
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

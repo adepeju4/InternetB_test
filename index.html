@@ -1,16 +1,536 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dist/main.css" />
     <title>Document</title>
   </head>
+
   <body id="app">
+    <!-- Header -->
+    <header class="header">
+      <img
+        src="src/assets/total-lawyers-logo-white-min 1.png"
+        alt="Total Lawyers Logo"
+        class="logo"
+      />
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <form>
+        <section class="content-wrapper" id="step-1">
+          <section class="product-info">
+            <!-- Trust Badge Section -->
+            <div class="trust-badges">
+              <div class="badge google-reviews">
+                <img
+                  src="/src/assets/image 12.svg"
+                  alt="Google Reviews"
+                  class="badge-icon"
+                />
+                <p class="badge-text">1,378 Google Reviews</p>
+              </div>
+
+              <div class="badge verisign-secured">
+                <img
+                  src="/src/assets/image 10.svg"
+                  alt="VeriSign Secured"
+                  class="badge-icon"
+                />
+              </div>
+
+              <div class="badge norton-secured">
+                <img
+                  src="/src/assets/image 13.svg"
+                  alt="Norton Secured"
+                  class="badge-icon"
+                />
+              </div>
+            </div>
+
+            <!-- Caption Section -->
+            <div class="caption">
+              <h2>
+                Discover How So Many Applicants Get up to $3,822/ Month in
+                Disability Benefits
+              </h2>
+              <p>Free | Takes only a minute | No SSN required</p>
+            </div>
+          </section>
+
+          <div class="form-step">
+            <!-- Age Question -->
+            <div class="form-group">
+              <label class="form-question">
+                <span>1.</span>
+                <span>How old are you?</span>
+              </label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  placeholder="Select an answer"
+                  class="dropdown-toggle"
+                  readonly
+                  required
+                />
+                <span class="fa fa-sort-desc" aria-hidden="true"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>18-30</li>
+                    <li>31-40</li>
+                    <li>41-50</li>
+                    <li>51-60</li>
+                    <li>61-70</li>
+                    <li>71-80</li>
+                    <li>81-90</li>
+                    <li>91-100</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Out of Work Question -->
+            <div class="form-group">
+              <p class="form-question">
+                <span>2.</span>
+                <span
+                  >Do you expect to be out of work for at least a year due to
+                  your health?</span
+                >
+              </p>
+              <div class="options">
+                <label class="option">
+                  <input type="radio" name="outOfWork" value="yes"/>
+                  <span class="custom-radio"></span>
+                  Yes
+                </label>
+                <label class="option">
+                  <input type="radio" name="outOfWork" value="no" />
+                  <span class="custom-radio"></span>
+                  No
+                </label>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button type="button" class="next-step-button">Next Step</button>
+              <div class="security-note">
+                <img
+                  src="/src/assets/mdi_security-lock.svg"
+                  alt="Security Icon"
+                  class="security-icon"
+                />
+                <p>Safe | Secure | Confidential</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="content-wrapper" id="step-2">
+          <div class="product-info">
+            <div class="trust-badges">
+              <div class="badge google-reviews">
+                <img
+                  src="/src/assets/image 12.svg"
+                  alt="Google Reviews"
+                  class="badge-icon"
+                />
+                <p class="badge-text">1,378 Google Reviews</p>
+              </div>
+              <div class="badge verisign-secured">
+                <img
+                  src="/src/assets/image 10.svg"
+                  alt="VeriSign Secured"
+                  class="badge-icon"
+                />
+              </div>
+              <div class="badge norton-secured">
+                <img
+                  src="/src/assets/image 13.svg"
+                  alt="Norton Secured"
+                  class="badge-icon"
+                />
+              </div>
+            </div>
+            <div class="caption">
+              <h2>
+                Discover How So Many Applicants Get up to $3,822/ Month in
+                Disability Benefits
+              </h2>
+              <p>Free | Takes only a minute | No SSN required</p>
+            </div>
+          </div>
+          <div class="form-step">
+            <div class="form-group">
+              <p class="form-question">
+                <span>3.</span>
+                <span
+                  >Have you been treated by a doctor, hospital, or clinic in the
+                  last year?</span
+                >
+              </p>
+              <div class="options">
+                <label class="option">
+                  <input type="radio" name="treated" value="yes" />
+                  <span class="custom-radio"></span>
+                  Yes
+                </label>
+                <label class="option">
+                  <input type="radio" name="treated" value="no" />
+                  <span class="custom-radio"></span>
+                  No
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <p class="form-question">
+                <span>4.</span>
+                <span
+                  >Have you had a full-time job within the past 5 years?</span
+                >
+              </p>
+              <div class="options">
+                <label class="option">
+                  <input type="radio" name="fulltimeJob" value="yes" />
+                  <span class="custom-radio"></span>
+                  Yes
+                </label>
+                <label class="option">
+                  <input type="radio" name="fulltimeJob" value="no" />
+                  <span class="custom-radio"></span>
+                  No
+                </label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="next-step-button">Next Step</button>
+              <div class="security-note">
+                <img
+                  src="/src/assets/mdi_security-lock.svg"
+                  alt="Security Icon"
+                  class="security-icon"
+                />
+                <p>Safe | Secure | Confidential</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="content-wrapper" id="step-3">
+          <div class="product-info">
+            <div class="trust-badges">
+              <div class="badge google-reviews">
+                <img
+                  src="/src/assets/image 12.svg"
+                  alt="Google Reviews"
+                  class="badge-icon"
+                />
+                <p class="badge-text">1,378 Google Reviews</p>
+              </div>
+              <div class="badge verisign-secured">
+                <img
+                  src="/src/assets/image 10.svg"
+                  alt="VeriSign Secured"
+                  class="badge-icon"
+                />
+              </div>
+              <div class="badge norton-secured">
+                <img
+                  src="/src/assets/image 13.svg"
+                  alt="Norton Secured"
+                  class="badge-icon"
+                />
+              </div>
+            </div>
+            <div class="caption">
+              <h2>
+                Discover How So Many Applicants Get up to $3,822/ Month in
+                Disability Benefits
+              </h2>
+              <p>Free | Takes only a minute | No SSN required</p>
+            </div>
+          </div>
+          <div class="form-step">
+            <div class="form-group">
+              <p class="form-question">
+                <span>5.</span>
+                <span>Do you already receive Social Security benefits?</span>
+              </p>
+              <div class="options">
+                <label class="option">
+                  <input type="radio" name="benefits" value="yes" />
+                  <span class="custom-radio"></span>
+                  Yes
+                </label>
+                <label class="option">
+                  <input type="radio" name="benefits" value="no" />
+                  <span class="custom-radio"></span>
+                  No
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <p class="form-question">
+                <span>6.</span>
+                <span
+                  >Have you hired an advocate or attorney to help get
+                  benefits?</span
+                >
+              </p>
+              <div class="options">
+                <label class="option">
+                  <input type="radio" name="advocate" value="yes" />
+                  <span class="custom-radio"></span>
+                  Yes
+                </label>
+                <label class="option">
+                  <input type="radio" name="advocate" value="no" />
+                  <span class="custom-radio"></span>
+                  No
+                </label>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="next-step-button">Next Step</button>
+              <div class="security-note">
+                <img
+                  src="/src/assets/mdi_security-lock.svg"
+                  alt="Security Icon"
+                  class="security-icon"
+                />
+                <p>Safe | Secure | Confidential</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 4 -->
+        <section class="content-wrapper" id="step-4">
+          <div class="product-info">
+            <div class="trust-badges">
+              <div class="badge google-reviews">
+                <img
+                  src="/src/assets/image 12.svg"
+                  alt="Google Reviews"
+                  class="badge-icon"
+                />
+                <p class="badge-text">1,378 Google Reviews</p>
+              </div>
+              <div class="badge verisign-secured">
+                <img
+                  src="/src/assets/image 10.svg"
+                  alt="VeriSign Secured"
+                  class="badge-icon"
+                />
+              </div>
+              <div class="badge norton-secured">
+                <img
+                  src="/src/assets/image 13.svg"
+                  alt="Norton Secured"
+                  class="badge-icon"
+                />
+              </div>
+            </div>
+            <div class="caption">
+              <h2>
+                Discover How So Many Applicants Get up to $3,822/ Month in
+                Disability Benefits
+              </h2>
+              <p>Free | Takes only a minute | No SSN required</p>
+            </div>
+          </div>
+          <div class="form-step">
+            <div class="form-group">
+              <label>
+                <span>7.</span>
+                <span>What’s your zip code?</span>
+                <textarea
+                  name="zipCode"
+                  class="options"
+                  id="zipCode"
+                  cols="30"
+                  rows="1"
+                ></textarea>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="form-question">
+                <span>8.</span>
+                <span
+                  >Briefly list the health conditions that prevent you from
+                  working.</span
+                >
+                <textarea
+                  name="healthConditions"
+                  class="options"
+                  id="healthConditions"
+                  cols="30"
+                  rows="4"
+                ></textarea>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="next-step-button">Next Step</button>
+              <div class="security-note">
+                <img
+                  src="/src/assets/mdi_security-lock.svg"
+                  alt="Security Icon"
+                  class="security-icon"
+                />
+                <p>Safe | Secure | Confidential</p>
+              </div>
+            </div>
+            <div class="terms-and-conditions">
+              You should not send any sensitive or confidential information
+              through this site. Any information sent through this site does not
+              create an attorney-client relationship and may not be treated as
+              privileged or confidential. Information you provide on this site
+              is subject to our
+              <a href="https://www.internetbrands.com/privacy/privacy-main"
+                >privacy policy</a
+              >.
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 5 -->
+        <section class="content-wrapper mb-10" id="step-5">
+          <div class="product-info">
+            <div class="trust-badges">
+              <div class="badge google-reviews">
+                <img
+                  src="/src/assets/image 12.svg"
+                  alt="Google Reviews"
+                  class="badge-icon"
+                />
+                <p class="badge-text">1,378 Google Reviews</p>
+              </div>
+              <div class="badge verisign-secured">
+                <img
+                  src="/src/assets/image 10.svg"
+                  alt="VeriSign Secured"
+                  class="badge-icon"
+                />
+              </div>
+              <div class="badge norton-secured">
+                <img
+                  src="/src/assets/image 13.svg"
+                  alt="Norton Secured"
+                  class="badge-icon"
+                />
+              </div>
+            </div>
+            <div class="caption">
+              <h2>
+                Get Your Free Consultation & Find Out How You Could Get up to
+                $3,822/Month
+              </h2>
+              <ul class="features">
+                <li>
+                  <img src="/src/assets/verified.svg" alt="feature badge" />
+                  <p>Attorneys & advocates in all 50 states</p>
+                </li>
+                <li>
+                  <img src="/src/assets/verified.svg" alt="feature badge" />
+                  <p>Pay $0 unless your claim is approved</p>
+                </li>
+                <li>
+                  <img src="/src/assets/verified.svg" alt="feature badge" />
+                  <p>Free evaluation for additional $ benefits</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-step">
+            <h2>Verify your information below</h2>
+            <div class="form-group">
+              <label for="firstName">Full name</label>
+              <div class="name-fields options">
+                <input type="text" id="firstName" placeholder="First Name" />
+                <input type="text" id="lastName" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="form-group phone-contact">
+              <label>
+                Phone Number
+                <input type="number" name="phone" id="phone" class="options" />
+              </label>
+            </div>
+            <div class="form-group email-address">
+              <label>
+                Email Address
+                <input
+                  name="emailAddress"
+                  id="address"
+                  class="options"
+                  cols="30"
+                  rows="1"
+                />
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="next-step-button">
+                Get Free Consultation
+              </button>
+              <div class="security-note">
+                <img
+                  src="/src/assets/mdi_security-lock.svg"
+                  alt="Security Icon"
+                  class="security-icon"
+                />
+                <p>Safe | Secure | Confidential</p>
+              </div>
+            </div>
+            <div class="terms-and-conditions">
+              By submitting this form I agree to the <a
+                href="https://www.internetbrands.com/ibterms/"
+                >Terms of Use</a
+              > and <a
+                href="https://www.internetbrands.com/privacy/privacy-main/"
+                >Privacy Policy</a
+              > and consent to be contacted by Martindale-Nolo and its
+              affiliates, and up to three attorneys regarding this request and
+              to receiving relevant marketing messages by automated means, text
+              and/or prerecorded messages at the number provided. Consent is not
+              required as a condition of service, <a href="#">Click Here</a> to
+              agree without providing consent to be contacted by automated
+              means, text and/or prerecorded messages. Rates may apply.
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Copyright © 2024 MH Sub I, LLC dba Nolo ® Self-help services may not
+        be permitted in all states. The information provided on this site is not
+        legal advice, does not constitute a lawyer referral service, and no
+        attorney-client or confidential relationship is or will be formed by use
+        of the site. The attorney listings on this site are paid attorney
+        advertising. In some states, the information on this website may be
+        considered a lawyer referral service. Please reference the Terms of Use
+        and the Supplemental Terms for specific information related to your
+        state. Your use of this website constitutes acceptance of the Terms of
+        Use, Supplemental Terms, IB Privacy Policy and Cookie Policy.
+      </p>
+    </footer>
+
+    <div class="overlay--primary">
+      <div class="overlay--image"></div>
+    </div>
     <script type="module" src="/src/script.ts"></script>
   </body>
 </html>
