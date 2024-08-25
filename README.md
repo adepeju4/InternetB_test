@@ -1,4 +1,5 @@
 # Project Name
+Total Lawyers 
 
 ## Introduction
 
@@ -13,8 +14,8 @@ This project is a web application that utilizes HTML, SCSS for styling, and Type
 1. **Clone the repository:**
 
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>```
+    git clone [<repository-url>](https://github.com/adepeju4/rrsoft_test.git)
+    cd rrsoft_test```
 
 2. **Install dependencies:** Run the following command to install all the necessary npm packages:
     ```npm install```
