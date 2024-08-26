@@ -25,7 +25,7 @@ This project is a web application that utilizes HTML, SCSS for styling, and Type
 3. **Compile SCSS to CSS:** Use the following command to watch for changes in your SCSS files and compile them to CSS:
 
     ```sh
-    npm run sass--watch
+    npm run sass-watch
 
 4. **Start the development server:**
     Run the following command to start the development server:
