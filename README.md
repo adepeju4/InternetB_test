@@ -15,23 +15,23 @@ This project is a web application that utilizes HTML, SCSS for styling, and Type
 
     ```sh
     cd InternetB_test_test
-    git clone https://github.com/adepeju4/InternetB_test_test.git```
+    git clone https://github.com/adepeju4/InternetB_test_test.git
 
 2. **Install dependencies:** Run the following command to install all the necessary npm packages:
 
     ```sh
-    npm install```
+    npm install
 
 3. **Compile SCSS to CSS:** Use the following command to watch for changes in your SCSS files and compile them to CSS:
 
     ```sh
-    sass --watch src/styles/app.scss:dist/main.css```
+    sass--watch
 
 4. **Start the development server:**
     Run the following command to start the development server:
 
     ```sh
-    npm run dev```
+    npm run dev
 
 ## Explanation
 

@@ -4,6 +4,7 @@
   "main": "script.js",
   "scripts": {
     "dev": "vite",
+    "sass-watch": "sass --watch src/styles/app.scss:dist/main.css",
     "build": "vite build",
     "serve": "vite preview",
     "watch": "tsc --watch",

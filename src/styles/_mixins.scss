@@ -18,8 +18,8 @@
   padding: 1.2rem 2.4rem;
 }
 
-
 @mixin inner-container-styles {
+  margin-bottom: 100px;
   padding: 20px 20px 40px 20px;
   background-color: $white;
   border-radius: 3px;
