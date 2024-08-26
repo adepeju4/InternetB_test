@@ -14,8 +14,8 @@ This project is a web application that utilizes HTML, SCSS for styling, and Type
 1. **Clone the repository:**
 
     ```sh
-    cd rrsoft_test
-    git clone https://github.com/adepeju4/rrsoft_test.git```
+    cd InternetB_test_test
+    git clone https://github.com/adepeju4/InternetB_test_test.git```
 
 2. **Install dependencies:** Run the following command to install all the necessary npm packages:
 
