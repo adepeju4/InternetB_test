@@ -15,17 +15,17 @@ This project is a web application that utilizes HTML, SCSS for styling, and Type
 
     ```sh
     
-    cd rrsoft_test``` git clone https://github.com/adepeju4/rrsoft_test.git
+    cd rrsoft_test``` git clone https://github.com/adepeju4/rrsoft_test.git```
 
 2. **Install dependencies:** Run the following command to install all the necessary npm packages:
-    ```npm install```
+    ```sh npm install```
 
 3. **Compile SCSS to CSS:** Use the following command to watch for changes in your SCSS files and compile them to CSS:
-    ```sass --watch src/styles/app.scss:dist/main.css```
+    ```sh sass --watch src/styles/app.scss:dist/main.css```
 
 4. **Start the development server:**
     Run the following command to start the development server:
-    ```npm run dev```
+    ```sh npm run dev```
 
 ## Explanation
 
