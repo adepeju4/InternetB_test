@@ -59,6 +59,6 @@ After setting up the development environment, you can open the index.html by run
 PS: This project uses vite as its build tool.
 
 Conclusion
-Follow the steps above to set up your development environment and start working on the project. If you encounter any issues, please refer to the documentation or seek help from the community.
+Follow the steps above to set up your development environment and start working on the project. If you encounter any issues, please refer to the documentation or reach out to me directly.
 
 Happy coding!
