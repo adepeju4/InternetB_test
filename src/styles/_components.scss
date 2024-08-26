@@ -264,7 +264,7 @@
 
       p {
         margin: 0;
-        font-family: "DM Sans", Arial, sans-serif;
+        font-family: $font-dm-sans;
         font-weight: 400;
       }
     }
@@ -331,7 +331,7 @@
     padding: 0;
     margin: 0;
     padding: 20px 0;
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font-family: $font-nunito-sans;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -360,7 +360,7 @@
 }
 
 footer p {
-  font-family: "Nunito Sans", Arial, sans-serif;
+  font-family: $font-nunito-sans;
   font-size: 1.5rem;
   line-height: 1.5;
   color: $black;
