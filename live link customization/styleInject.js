@@ -173,7 +173,7 @@ style.innerHTML = `
 
 
   .lg-subNotification {
-    display: block;
+    display: none
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -186,9 +186,9 @@ style.innerHTML = `
 
   @media (max-width: 1199px) {
 
-    .lg-subNotification {
-      display: none
-    }
+   .lg-subNotification {
+    display: none;
+}
 
     .mobile-subNotification {
       display: block

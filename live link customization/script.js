@@ -27,6 +27,7 @@ const sidebarSubSpans = document.querySelectorAll(".sidebar-sub span");
 const sidebarHeader = document.querySelector(".sidebar-header");
 const captionSm = sidebarHeader.querySelector(".visible-xs");
 const captionBg = sidebarHeader.querySelector(".hidden-xs");
+const lgSubNotification = document.querySelector(".lg-subNotification");
 
 if (window.location.href.includes("step-4")) {
   if (button) {
@@ -134,7 +135,9 @@ const subNotification = document.createElement("h3");
 subNotification.classList.add("mobile-subNotification");
 subNotification.innerText = "We found 1 SSDI lawyer in your area!";
 
-sidebarSubSpans[0].insertAdjacentElement("afterend", subNotification);
+if (window.location.href.includes("step-5")) {
+  sidebarSubSpans[0].insertAdjacentElement("afterend", subNotification);
+}
 
 if (nolopathForm) {
   const headingNotification = document.createElement("h3");
@@ -142,7 +145,9 @@ if (nolopathForm) {
   headingNotification.innerText = "We found 1 SSDI lawyer in your area!";
   headingNotification.style.textAlign = "center";
 
-  nolopathForm.insertAdjacentElement("afterbegin", headingNotification);
+  if (window.location.href.includes("step-5")) {
+    nolopathForm.insertAdjacentElement("afterbegin", headingNotification);
+  }
 }
 
 const newParagraph = document.createElement("p");
